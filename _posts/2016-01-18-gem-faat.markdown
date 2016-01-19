@@ -2,7 +2,7 @@
 layout: post
 title:  "This is my FAAT!"
 date:   2016-01-18 18:24:30
-categories: faat
+categories: en
 tags: [ruby, open-source, faat, rubygems, gem, rails, anti-patern]
 ---
 I want to introduce you with my first open-source project. It's Faat! Gem that will kill your fat model.

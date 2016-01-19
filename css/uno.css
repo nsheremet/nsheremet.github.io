@@ -1274,8 +1274,6 @@ hr {
 	text-align: center;
 	color: #FFF;
 	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4); }
-	.panel-inverted a {
-		color: #FFF; }
 
 .cover-navigation {
 	margin-top: 10px; }
@@ -1308,17 +1306,13 @@ hr {
 
 .btn, .navigation__item a {
 	padding: 10px 20px;
-	border: 1px solid #e25440;
+	border: 2px solid gray;
 	border-radius: 20px;
 	font-size: .9em;
 	font-weight: bold;
 	letter-spacing: 1px;
 	text-shadow: none;
-	color: #e25440;
 	-webkit-font-smoothing: antialiased; }
-	.btn:hover, .navigation__item a:hover {
-		color: #b9301c;
-		border-color: #b9301c; }
 
 .btn-secondary {
 	border-color: #5ba4e5;
@@ -1380,13 +1374,14 @@ nav {
 	.navigation__item a {
 		display: block;
 		position: relative;
-		border-color: #FFF;
-		color: #FFF;
+		border-color: transparent;
+		color: #ececec;
 		opacity: .8; }
 		.navigation__item a:hover {
 			color: #FFF;
-			border-color: #FFF;
+			border: 2px solid #FFF;
 			opacity: 1; }
+
 
 .navigation--social {
 	margin-left: 1.5em; }
