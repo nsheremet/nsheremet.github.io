@@ -14,7 +14,7 @@ author:
 
 # Build settings
 destination: _site
-paginate: 1
+paginate: 10
 permalink: /:categories/:title/
 # markdown: markdown
 highlighter: pygments
