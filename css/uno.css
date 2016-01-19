@@ -1378,8 +1378,8 @@ nav {
 	.navigation__item a {
 		display: block;
 		position: relative;
-		border-color: transparent;
-		color: #ececec;
+		border-color: #898989;
+		color: #ECECEC;
 		opacity: .8; }
 		.navigation__item a:hover {
 			color: #FFF;
