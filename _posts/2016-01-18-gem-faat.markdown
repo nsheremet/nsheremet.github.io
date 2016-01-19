@@ -2,6 +2,7 @@
 layout: post
 title:  "This is my FAAT!"
 date:   2016-01-18 18:24:30
+comments: true
 categories: en
 tags: [ruby, open-source, faat, rubygems, gem, rails, anti-patern]
 ---

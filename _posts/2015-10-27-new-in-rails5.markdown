@@ -2,6 +2,7 @@
 layout: post
 title:  "Що нового в Rails 5"
 date:   2015-10-27 12:30:00
+comments: true
 categories: ukr
 tags: [ruby, rails, ruby on rails, rails 5]
 ---
