@@ -19,28 +19,23 @@ generator will create folder `forms` in `app` directory, and file `{form_name}_f
 
 ### Initialize:
 
-{% highlight ruby %}
 @post = Post.new
 @post_service = PostService.new(@post)
 
 @post_form = PostForm.new(post_form_params)
-{% endhighlight %}
 
 ### Usage:
 
-{% highlight ruby %}
 @post_service.destroy  => destroy @post
 @post_service.update   => update @post
 
 PostService.last     => Post.last
 PostService.all      => Post.all
 PostService.where(title: "First Test Title") => Post.where(...)
-{% endhighlight %}
 
 ### Examples:
 
 In `post_services.rb`
-{% highlight ruby %}
 
 class PostService < Faat::Services::Base
     def initialize(post_form)
@@ -49,14 +44,11 @@ class PostService < Faat::Services::Base
         send_confirmation_email(@author)
     end
 end
-{% endhighlight %}
 
 In `post_controller.rb`
-{% highlight ruby %}
 def create
     @post_form = PostForm.new(post_form_params)
     if @post_form.valid?
         @post_service = PostService.new(@post_form) => create @author and @post
     end
 end
-{% endhighlight %}
