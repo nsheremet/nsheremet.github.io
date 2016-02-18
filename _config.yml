@@ -12,12 +12,17 @@ author:
   github_username:  xo8bit
   linkedin_username:  nsheremet
 
+# Gems
+gems: [jekyll-paginate]
+
 # Build settings
 destination: _site
 paginate: 10
+paginate_path: "page:num"
 permalink: /:categories/:title/
 # markdown: markdown
 highlighter: rouge
+
 
 kramdown:
   # use Github Flavored Markdown
