@@ -11,11 +11,11 @@ Because for ethical reasons it is better to use the concept of services. Since i
 
 ## Updated usage
 
-Run ```rails generate faat:services {service_name}```,
-generator will create folder ```services``` in ```app``` directory, and file ```{service_name}_service.rb```
+Run `rails generate faat:services {service_name}`,
+generator will create folder `services` in `app` directory, and file `{service_name}_service.rb`
 
-Run ```rails generate faat:forms {form_name} {attribute_name}:{attribute_type}```,
-generator will create folder ```forms``` in ```app``` directory, and file ```{form_name}_form.rb```
+Run `rails generate faat:forms {form_name} {attribute_name}:{attribute_type}`,
+generator will create folder `forms` in `app` directory, and file `{form_name}_form.rb`
 
 ### Initialize:
 {% highlight ruby %}
@@ -38,7 +38,7 @@ PostService.where(title: "First Test Title") => Post.where(...)
 
 ### Examples:
 
-In ```post_services.rb```
+In `post_services.rb`
 {% highlight ruby %}
 
 class PostService < Faat::Services::Base
@@ -54,7 +54,7 @@ class PostService < Faat::Services::Base
 end
 {% endhighlight %}
 
-In```post_controller.rb```
+In `post_controller.rb`
 {% highlight ruby %}
 
 ...
