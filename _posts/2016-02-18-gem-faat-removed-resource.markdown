@@ -18,8 +18,8 @@ Run `rails generate faat:forms {form_name} {attribute_name}:{attribute_type}`,
 generator will create folder `forms` in `app` directory, and file `{form_name}_form.rb`
 
 ### Initialize:
-{% highlight ruby %}
 
+{% highlight ruby %}
 @post = Post.new
 @post_service = PostService.new(@post)
 
@@ -27,6 +27,7 @@ generator will create folder `forms` in `app` directory, and file `{form_name}_f
 {% endhighlight %}
 
 ### Usage:
+
 {% highlight ruby %}
 @post_service.destroy  => destroy @post
 @post_service.update   => update @post
@@ -42,22 +43,16 @@ In `post_services.rb`
 {% highlight ruby %}
 
 class PostService < Faat::Services::Base
-    ...
-
     def initialize(post_form)
         @author = Author.create!(name: post_form.author_name, email: post_form.author_email)
         @post = Post.create!(text: post_form.text, title: post_form.title)
         send_confirmation_email(@author)
     end
-
-    ...
 end
 {% endhighlight %}
 
 In `post_controller.rb`
 {% highlight ruby %}
-
-...
 def create
     @post_form = PostForm.new(post_form_params)
     if @post_form.valid?
