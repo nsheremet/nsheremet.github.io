@@ -6,6 +6,7 @@ comments: true
 categories: en
 tags: [ruby, open-source, faat, rubygems, gem, rails, anti-patern]
 ---
+
 Hi, guys! I decided to remove the ability to create resources.
 Because for ethical reasons it is better to use the concept of services. Since it is more suitable for the removal of business logic in services. Also the concept of services for wider use. And also since the implementation of resources and services was the same, it would be correct to leave only services.
 
