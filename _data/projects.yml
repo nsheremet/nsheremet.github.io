@@ -1,0 +1,12 @@
+- name: DeadlyTweetBot
+  link: https://telegram.me/deadlytweetbot
+  description: "This is Telegram Bot, which can help you to post your tweets in Twitter with auto destroying timer. So when times over, your tweet is gone."
+- name: Gem Faat
+  link: https://github.com/nsheremet/faat
+  description: It's Faat! Gem that will kill your fat model. Generally it is a library that allows you to conveniently operate service objects in Ruby on Rails.
+- name: Karatel App
+  link: https://karatel.foundation101.org
+  description: --
+- name: DarcMatter.com
+  link: https://darcmatter.com
+  description: DarcMatter- an online investment platform that provides transparent and seamless access into alternative investments.

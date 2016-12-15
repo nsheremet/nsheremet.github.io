@@ -1,33 +1,62 @@
-# Site settings
-title: Nazarii Sheremet
-description: 'Husband, Geek, Software Engineer'
-url: 'http://sheremet.io'
-baseurl: '/'
-# google_analytics: 'UA-XXXXXX-X'
+title: "Nazarii Sheremet"
+description: "Nazarii Sheremet personal website"
+about: "I'm Software Developer. Working with Ruby/Golang. Geek. Husband."
+location: "Eastern Europe, Ukraine"
+email: nazarii.sheremet@gmail.com
+baseurl: ""
 
-author:
-  name: 'Nazarii Sheremet'
-  email: nazar@sheremet.com
-  twitter_username: xo8bit
-  github_username:  xo8bit
-  linkedin_username:  nsheremet
+url: "http://nsheremet.github.io" # replace by your site's url
+github_username:  nsheremet
+author: "Nazarii Sheremet"
 
-# Gems
-gems: [jekyll-paginate]
+# google analytics tracking code, please change the value
+g_analytics: "UA-72591400-1"
 
-# Build settings
-destination: _site
-paginate: 10
-paginate_path: "page:num"
-permalink: /:categories/:title/
-# markdown: markdown
+# add your disqus to enable comments
+disqus_shortname:
+
+# add your disqus to enable comments
+disqus_shortname:
+
+# language settings
+isolang: en
+close_btn: "Close"
+home_btn: "Home"
+projects_btn: "Projects"
+posts_btn: "Posts"
+imprint_btn: "Imprint"
+name_badge: "an article by"
+rss_badge: "Subscribe feed!"
+
+# build settings
+markdown: kramdown
 highlighter: rouge
 
-
 kramdown:
-  # use Github Flavored Markdown
   input: GFM
-  # do not replace newlines by <br>s
   hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    tab_width: 4
 
-exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'screenshot.png']
+# third party gems
+gems:
+  - jekyll-paginate
+  - jekyll-gist
+  - jemoji
+
+whitelist:
+  - jekyll-paginate
+  - jekyll-gist
+  - jemoji
+
+# exclude files
+exclude:
+  - LICENSE
+  - README.md

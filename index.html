@@ -1,24 +1,87 @@
 ---
 layout: default
 ---
-
-<div class="main-post-list">
-
-  <ol class="post-list">
-    {% for post in paginator.posts %}
-      <li>
-        <h2 class="post-list__post-title post-title"><a href="{{ site.baseurl }}{{ post.url | remove_first: '/' }}" title="{{ post.title }}">{{ post.title }}</a></h2>
-        <p class="excerpt">{{ post.excerpt | remove: '<p>' | remove: '</p>' }}&hellip;</p>
-        <div class="post-list__meta"><time datetime="{{ post.date | date: "%-d %b %Y" }}" class="post-list__meta--date date">{{ post.date | date: "%-d %b %Y" }}</time> &#8226; <span class="post-meta__tags">on {% for tag in post.tags %}<a href="{{ site.baseurl }}tags/#{{ tag }}">{{ tag }}</a> {% endfor %}</span></div>
-        <hr class="post-list__divider">
-      </li>
-    {% endfor %}
-  </ol>
-
-  <hr class="post-list__divider ">
-
-  {% if paginator.previous_page or paginator.next_page %}
-      {% include pagination.html %}
-  {% endif %}
-
+<script src="{{ "/styles/index.js" | prepend: site.baseurl }}"></script>
+<div>
+  <a id="posts-btn" class="waves-effect waves-teal btn-flat btn-large" onclick="show_posts();">{{ site.posts_btn }}</a>
+  <a id="projects-btn" class="waves-effect waves-teal btn-flat btn-large" onclick="show_projects();">{{ site.projects_btn }}</a>
 </div>
+<div id="posts">
+
+  <h2 class="my-mini-heading">{{ site.posts_btn }}</h2>
+
+  <ul>
+    {% for post in site.posts %}
+    <li>
+      <p class="my-item">
+        <a href="{{ post.url | prepend: site.baseurl }}" class="my-link">{{ post.title }}</a><br>
+        <span class="my-item-sub">{{ post.date | date: "%b %-d, %Y" }}</span><br>
+          {{ post.content | strip_html | truncatewords: 20 }}
+      </p>
+    </li>
+    {% endfor %}
+    <li>
+      <p class="my-item">
+        <a href="{{ "/feed.xml" | prepend: site.baseurl }}" class="my-link">RSS</a> / <a href="{{ "/atom.xml" | prepend: site.baseurl }}" class="my-link">ATOM</a><br>
+        <i class="fa fa-rss" aria-hidden="true"></i> {{ site.rss_badge }}
+    </li>
+  </ul>
+
+  <div>
+    <a onclick="hide_lists();" class="waves-effect waves-teal btn-flat btn-large">{{ site.close_btn }}</a>
+  </div>
+</div>
+
+
+<div id="projects">
+  <h2 class="my-mini-heading">{{ site.projects_btn }}</h2>
+  <ul>
+    {% for project in site.data.projects %}
+    <li>
+      <p class="my-item"><a href="{{ project.link }}" class="my-link">{{ project.name }}</a><br>
+        {{ project.description }}
+      </p>
+    </li>
+    {% endfor %}
+  </ul>
+  <div>
+    <a onclick="hide_lists();" class="waves-effect waves-teal btn-flat btn-large">{{ site.close_btn }}</a>
+  </div>
+</div>
+
+<noscript>
+  <div id="posts-noscript">
+
+    <h2 class="my-mini-heading">{{ site.posts_btn }}</h2>
+
+    <ul>
+      {% for post in site.posts %}
+      <li>
+        <p class="my-item">
+          <a href="{{ post.url | prepend: site.baseurl }}" class="my-link">{{ post.title }}</a><br>
+          <span class="my-item-sub">{{ post.date | date: "%b %-d, %Y" }}</span>
+        </p>
+      </li>
+      {% endfor %}
+      <li>
+        <p class="my-item">
+          <a href="{{ "/feed.xml" | prepend: site.baseurl }}" class="my-link">RSS</a> / <a href="{{ "/atom.xml" | prepend: site.baseurl }}" class="my-link">ATOM</a><br>
+          <span class="my-item-sub"><i class="fa fa-rss" aria-hidden="true"></i> {{ site.rss_badge }}</span>
+      </li>
+    </ul>
+  </div>
+  <div id="projects-noscript">
+    <h2 class="my-mini-heading">{{ site.projects_btn }}</h2>
+    <ul>
+      {% for project in site.data.projects %}
+      <li>
+        <p class="my-item"><a href="{{ project.link }}" class="my-link">{{ project.name }}</a><br>
+          <span class="my-item-sub">
+        {{ project.description }}
+      </span>
+        </p>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</noscript>
