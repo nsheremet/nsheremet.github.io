@@ -25,6 +25,7 @@
     <meta name="twitter:description" content="{{ site.description }}" />
     <meta name="twitter:image" content="{{ site.url }}/images/favicon.png" />
 
+    <link rel="canonical" href=" { { site.url } }{ { page.url } }" />
     <link href="{{ "/atom.xml" | prepend: site.baseurl }}" type="application/atom+xml" rel="alternate" title="ATOM feed">
     <link href="{{ "/feed.xml" | prepend: site.baseurl }}" type="application/rss+xml" rel="alternate" title="RSS feed">
 
@@ -37,4 +38,9 @@
     <link rel="stylesheet" href="{{ "/styles/github-markdown.css" | prepend: site.baseurl }}">
     <link rel="stylesheet" href="{{ "/styles/fa/css/font-awesome.min.css" | prepend: site.baseurl }}">
 
+    <script type="text/javascript">
+      var host = "yoursite.com";
+      if ((host == window.location.host) && (window.location.protocol != "https:"))
+          window.location.protocol = "https";
+    </script>
 </head>
