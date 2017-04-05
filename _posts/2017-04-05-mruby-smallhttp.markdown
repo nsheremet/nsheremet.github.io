@@ -8,7 +8,7 @@ tags: [ruby, open-source, mrbgems, mruby, http, http-client]
 ---
 Hi guys.
 While I was working on the [library](https://github.com/nsheremet/mruby-tbot) for Telegram API.
-I ran into the problem of finding a good http-client library. Some libraries did not allow `multipart/form-data` requests. And in others it was necessary to form the body itself. I thought that this is a problem that I can solve. I wrote the library a small library, which is a small `http-client` (less than 200 lines of code). There are still small problems in it. So I will be glad to any help.
+I ran into the problem of finding a good http-client library. Some libraries did not allow `multipart/form-data` requests. And in others it was necessary to form the body itself. I thought that this is a problem that I can solve. I wrote a library, which is a small `http-client` (less than 200 lines of code). There are still small problems in it. So I will be glad to any help.
 
 So here is link on [mruby-smallhttp](https://github.com/nsheremet/mruby-smallhttp).
 
