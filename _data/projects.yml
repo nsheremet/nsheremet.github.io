@@ -1,3 +1,9 @@
+- name: mruby-smallhttp
+  link: https://github.com/nsheremet/mruby-smallhttp
+  description: "Small http-client gem for mruby"
+- name: mruby-tbot
+  link: https://github.com/nsheremet/mruby-tbot
+  description: MRuby wrapper for <a href="https://core.telegram.org/bots/api">Telegram's Bot API</a>.
 - name: DeadlyTweetBot
   link: https://telegram.me/deadlytweetbot
   description: "This is Telegram Bot, which can help you to post your tweets in Twitter with auto destroying timer. So when times over, your tweet is gone."
