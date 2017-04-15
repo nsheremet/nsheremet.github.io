@@ -1,3 +1,6 @@
+- name: knock
+  link: https://github.com/nsheremet/knock
+  description: "knock is a simple HTTP Client for Rust"
 - name: mruby-smallhttp
   link: https://github.com/nsheremet/mruby-smallhttp
   description: "Small http-client gem for mruby"
