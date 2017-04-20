@@ -1,3 +1,6 @@
+- name: getsb-cli
+  link: https://github.com/nsheremet/getsb-cli
+  description: "Getsb is a command-line tool for sending HTTP request."
 - name: knock
   link: https://github.com/nsheremet/knock
   description: "knock is a simple HTTP Client for Rust"
