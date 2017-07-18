@@ -1,3 +1,6 @@
+- name: had gem
+  link: https://github.com/nsheremet/had
+  description: Had is Hanami Api Documentation gem. This gem generates API documentation for integration tests written with RSpec for Hanami
 - name: getsb-cli
   link: https://github.com/nsheremet/getsb-cli
   description: "Getsb is a command-line tool for sending HTTP request."
