@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="map[]" />
+    <meta name="description" content="I&#39;m Software Developer. Working with Ruby/MRuby/Rust/Go/C/C&#43;&#43;. Geek. Husband.">
+    <link rel="shortcut icon" type="image/x-icon" href="https://nsheremet.pw/img/favicon.ico">
+    <title>How I wrote the http-client for MRuby</title>
+    <meta name="generator" content="Hugo 0.20.2" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://nsheremet.pw/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,200bold,400old" />
+    
+    <!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+    
+  </head>
+
+  <body>
+    <div id="wrap">
+
+      
+      <nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="https://nsheremet.pw/"><i class="fa fa-home"></i></a>
+    </div>
+    <div id="navbar">
+      <ul class="nav navbar-nav navbar-right">
+      
+        
+        <li><a href="/blog/">BLOG</a></li>
+        
+        <li><a href="/projects/">PROJECTS</a></li>
+        
+        <li><a href="/files/nazarii_sheremet_cv.pdf">RESUME</a></li>
+        
+      
+      </ul>
+    </div>
+  </div>
+</nav>
+
+      
+      <div class="container">
+        <div class="blog-post">
+          <h3>
+            <strong><a href="https://nsheremet.pw/blog/mruby-smallhttp/">How I wrote the http-client for MRuby</a></strong>
+          </h3>
+        </div>
+        <div class="blog-title">
+          <h4>
+          April 4, 2017
+            &nbsp;&nbsp;
+            
+            <span class="label label-success">ruby</span>
+            
+            <span class="label label-success">open-source</span>
+            
+            <span class="label label-success">mrbgems</span>
+            
+            <span class="label label-success">mruby</span>
+            
+            <span class="label label-success">http</span>
+            
+            <span class="label label-success">http-client</span>
+            
+          </h4>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="blogpost">
+              
+
+<p>Hi guys.
+While I was working on the <a href="https://github.com/nsheremet/mruby-tbot">library</a> for Telegram API.
+I ran into the problem of finding a good http-client library. Some libraries did not allow <code>multipart/form-data</code> requests. And in others it was necessary to form the body itself. I thought that this is a problem that I can solve. I wrote a library, which is a small <code>http-client</code> (less than 200 lines of code). There are still small problems in it. So I will be glad to any help.</p>
+
+<p>So here is link on <a href="https://github.com/nsheremet/mruby-smallhttp">mruby-smallhttp</a>.</p>
+
+<h2 id="how-to-install-by-mrbgems">How to Install by mrbgems</h2>
+
+<ul>
+<li>add conf.gem line to <code>build_config.rb</code></li>
+</ul>
+
+<pre><code class="language-ruby">MRuby::Build.new do |conf|
+  conf.gem :mgem =&gt; 'mruby-smallhttp'
+end
+</code></pre>
+
+<h2 id="usage">Usage</h2>
+
+<h3 id="requests">Requests</h3>
+
+<pre><code class="language-ruby"># GET Request
+HTTP.new(&quot;https://example.com/api/v1/users&quot;).get
+#=&gt; response
+
+# POST Request
+data = { name: 'value' }
+headers = {'Content-Type' =&gt; 'application/json'}
+
+HTTP.new(&quot;https://example.com/api/v1/users&quot;).post(data, headers)
+#=&gt; response
+
+# PUT Request
+http = HTTP.new(&quot;https://example.com/api/v1/users/1&quot;)
+http.put(data, headers)
+
+# DELETE Request
+http = HTTP.new(&quot;https://example.com/api/v1/users/1&quot;)
+http.delete(data, headers)
+#=&gt; response
+
+# HEAD &amp; OPTIONS Request
+http = HTTP.new(&quot;https://example.com/api/v1/users/1&quot;)
+http.request(&quot;HEAD&quot;, body, header)
+#=&gt; response
+</code></pre>
+
+<h3 id="how-to-send-file">How to send file</h3>
+
+<pre><code class="language-ruby"># How to send file in post request
+body = { name: 'value', file: File.read('filename') }
+header = { 'Content-Type' =&gt; 'multipart/form-data' }
+http = HTTP.new(&quot;https://example.com/api/v1/users/1&quot;)
+http.post(body, header)
+#=&gt; response
+</code></pre>
+
+<p><code>Content-Type</code> supported: <code>application/json</code>, <code>application/x-www-form-urlencoded</code>, <code>multipart/form-data</code></p>
+
+<p>Thanks</p>
+
+              <hr>
+              <div class="related-posts">
+                <h5>Related Posts</h5>
+                
+                  <div class="row">
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                      <h6 style="text-align: right">
+                        July 18, 2017
+                      </h6>
+                    </div>
+                    <div class="col-sm-8 col-md-8 col-lg-8">
+                      <h6 style="text-align: left">
+                        <strong><a href="/blog/had-gem/">Hanami Api Documentation [had]</a></strong>
+                      </h6>
+                    </div>
+                  </div>
+                
+                  <div class="row">
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                      <h6 style="text-align: right">
+                        April 18, 2017
+                      </h6>
+                    </div>
+                    <div class="col-sm-8 col-md-8 col-lg-8">
+                      <h6 style="text-align: left">
+                        <strong><a href="/blog/getsb-cli/">My first Rust Experience</a></strong>
+                      </h6>
+                    </div>
+                  </div>
+                
+                  <div class="row">
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                      <h6 style="text-align: right">
+                        April 10, 2017
+                      </h6>
+                    </div>
+                    <div class="col-sm-8 col-md-8 col-lg-8">
+                      <h6 style="text-align: left">
+                        <strong><a href="/blog/ruby-weekly/">How my post got into Ruby Weekly 343</a></strong>
+                      </h6>
+                    </div>
+                  </div>
+                
+              </div>
+            </div>
+          </div>
+          <hr>
+        <div class="disqus">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+
+    (function() {
+      
+      
+      if (window.location.hostname == "localhost")
+        return;
+
+      var disqus_shortname = 'nsheremet';
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+        </div>
+      </div>
+      
+    </div>
+
+    
+    <footer>
+  <div id="footer">
+    <div class="container">
+      <p class="text-muted">&copy; 2017 Nazarii Sheremet. All rights reserved. Powered by <a href="https://gohugo.io/">Hugo</a> and
+      <a href="http://www.github.com/nurlansu/hugo-sustain/">sustain</a> with ♥</p>
+    </div>
+  </div>
+</footer>
+<div class="footer"></div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://nsheremet.pw/js/docs.min.js"></script>
+<script src="https://nsheremet.pw/js/main.js"></script>
+
+<script src="https://nsheremet.pw/js/ie10-viewport-bug-workaround.js"></script>
+
+
+    
+  </body>
+</html>

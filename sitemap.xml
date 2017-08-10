@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://nsheremet.pw/blog/had-gem/</loc>
+    <lastmod>2017-07-18T13:11:29+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nsheremet.pw/blog/getsb-cli/</loc>
+    <lastmod>2017-04-18T13:11:29+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nsheremet.pw/blog/ruby-weekly/</loc>
+    <lastmod>2017-04-10T14:25:24+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nsheremet.pw/blog/mruby-smallhttp/</loc>
+    <lastmod>2017-04-04T14:25:24+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nsheremet.pw/projects/</loc>
+    <lastmod>2016-10-02T22:55:05-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nsheremet.pw/blog/removed-resource/</loc>
+    <lastmod>2016-02-18T14:33:44+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nsheremet.pw/blog/faat-update/</loc>
+    <lastmod>2016-01-26T14:36:32+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nsheremet.pw/blog/faat-gem/</loc>
+    <lastmod>2015-11-18T14:42:26+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nsheremet.pw/tags/api/</loc>
+    <lastmod>2017-07-18T13:11:29+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nsheremet.pw/blog/</loc>
+    <lastmod>2017-07-18T13:11:29+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nsheremet.pw/tags/cargo/</loc>
+    <lastmod>2017-04-18T13:11:29+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nsheremet.pw/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nsheremet.pw/categories/code/</loc>
+    <lastmod>2017-07-18T13:11:29+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nsheremet.pw/tags/crates/</loc>
+    <lastmod>2017-04-18T13:11:29+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nsheremet.pw/tags/documentation/</loc>
+    <lastmod>2017-07-18T13:11:29+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nsheremet.pw/tags/faat/</loc>
+    <lastmod>2016-02-18T14:33:44+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nsheremet.pw/tags/had/</loc>
+    <lastmod>2017-07-18T13:11:29+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nsheremet.pw/tags/hanami/</loc>
+    <lastmod>2017-07-18T13:11:29+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nsheremet.pw/tags/http/</loc>
+    <lastmod>2017-04-04T14:25:24+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nsheremet.pw/tags/http-client/</loc>
+    <lastmod>2017-04-04T14:25:24+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nsheremet.pw/tags/mrbgems/</loc>
+    <lastmod>2017-04-10T14:25:24+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nsheremet.pw/tags/mruby/</loc>
+    <lastmod>2017-04-10T14:25:24+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nsheremet.pw/</loc>
+    <lastmod>2017-07-18T13:11:29+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nsheremet.pw/tags/open-source/</loc>
+    <lastmod>2017-04-18T13:11:29+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nsheremet.pw/tags/projects/</loc>
+    <lastmod>2016-10-02T22:55:05-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nsheremet.pw/categories/projects/</loc>
+    <lastmod>2016-10-02T22:55:05-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nsheremet.pw/tags/ruby/</loc>
+    <lastmod>2017-07-18T13:11:29+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nsheremet.pw/tags/rubygems/</loc>
+    <lastmod>2016-02-18T14:33:44+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nsheremet.pw/tags/rubyweekly/</loc>
+    <lastmod>2017-04-10T14:25:24+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nsheremet.pw/tags/rust/</loc>
+    <lastmod>2017-04-18T13:11:29+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nsheremet.pw/tags/rust-lang/</loc>
+    <lastmod>2017-04-18T13:11:29+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nsheremet.pw/tags/</loc>
+    <lastmod>2017-07-18T13:11:29+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

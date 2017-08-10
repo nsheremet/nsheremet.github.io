@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Nazarii Sheremet</title>
+    <link>https://nsheremet.pw/categories/</link>
+    <description>Recent content in Categories on Nazarii Sheremet</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    
+	<atom:link href="https://nsheremet.pw/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Code</title>
+      <link>https://nsheremet.pw/categories/code/</link>
+      <pubDate>Tue, 18 Jul 2017 13:11:29 +0300</pubDate>
+      
+      <guid>https://nsheremet.pw/categories/code/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>https://nsheremet.pw/categories/projects/</link>
+      <pubDate>Sun, 02 Oct 2016 22:55:05 -0400</pubDate>
+      
+      <guid>https://nsheremet.pw/categories/projects/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

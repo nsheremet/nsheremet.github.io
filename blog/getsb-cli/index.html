@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="map[]" />
+    <meta name="description" content="I&#39;m Software Developer. Working with Ruby/MRuby/Rust/Go/C/C&#43;&#43;. Geek. Husband.">
+    <link rel="shortcut icon" type="image/x-icon" href="https://nsheremet.pw/img/favicon.ico">
+    <title>My first Rust Experience</title>
+    <meta name="generator" content="Hugo 0.20.2" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://nsheremet.pw/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,200bold,400old" />
+    
+    <!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+    
+  </head>
+
+  <body>
+    <div id="wrap">
+
+      
+      <nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="https://nsheremet.pw/"><i class="fa fa-home"></i></a>
+    </div>
+    <div id="navbar">
+      <ul class="nav navbar-nav navbar-right">
+      
+        
+        <li><a href="/blog/">BLOG</a></li>
+        
+        <li><a href="/projects/">PROJECTS</a></li>
+        
+        <li><a href="/files/nazarii_sheremet_cv.pdf">RESUME</a></li>
+        
+      
+      </ul>
+    </div>
+  </div>
+</nav>
+
+      
+      <div class="container">
+        <div class="blog-post">
+          <h3>
+            <strong><a href="https://nsheremet.pw/blog/getsb-cli/">My first Rust Experience</a></strong>
+          </h3>
+        </div>
+        <div class="blog-title">
+          <h4>
+          April 18, 2017
+            &nbsp;&nbsp;
+            
+            <span class="label label-success">rust</span>
+            
+            <span class="label label-success">open-source</span>
+            
+            <span class="label label-success">cargo</span>
+            
+            <span class="label label-success">crates</span>
+            
+            <span class="label label-success">rust-lang</span>
+            
+          </h4>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="blogpost">
+              
+
+<h3 id="hi-guys">Hi guys.</h3>
+
+<p>Two weeks ago I started to learn <a href="https://www.rust-lang.org/">Rust</a>,
+for better learning, I decided to rewrite my library <code>mruby-smallhttp</code> on Rust.
+Let&rsquo;s get to know Cargo. It&rsquo;s something like <code>bundler</code> in Ruby world.</p>
+
+<pre><code class="language-shell">$ cargo new library # =&gt; generate a template for project
+$ tree # =&gt;
+library
+├── Cargo.toml
+└── src
+    └── lib.rs
+</code></pre>
+
+<p><code>Cargo.toml</code> it&rsquo;s a manifest file. If you want to know more about how to get started in Rust, here is the <a href="http://doc.crates.io/index.html">link</a>.
+<code>lib.rs</code> it&rsquo;s a main file for a library. If you create a binary project the main file is <code>main.rs</code>.</p>
+
+<p>If you want to use my lib in your projects, here is examples:</p>
+
+<h5 id="install">Install</h5>
+
+<pre><code class="language-toml"># Cargo.toml
+[dependencies]
+knock = &quot;0.1&quot;
+</code></pre>
+
+<h5 id="simple-get-request">Simple GET request</h5>
+
+<pre><code class="language-rust">extern crate knock;
+
+use knock::HTTP;
+
+fn main() {
+	let http = HTTP::new(&quot;https://google.com&quot;).unwrap();
+	let response = http.get().send();
+}
+</code></pre>
+
+<h5 id="simple-post-request">Simple POST request</h5>
+
+<pre><code class="language-rust">extern crate knock;
+
+use knock::HTTP;
+use std::collections::HashMap;
+
+fn main() {
+    let http = HTTP::new(&quot;https://google.com&quot;).unwrap();
+    let mut body = HashMap::new();
+    let mut headers = HashMap::new();
+
+    body.insert(&quot;file&quot;, Data::File(&quot;/path/to/file.file&quot;));
+    body.insert(&quot;field&quot;, Data::String(&quot;value&quot;));
+
+    headers.insert(&quot;Content-Type&quot;, &quot;multipart/form-data&quot;);
+
+    let response = http.post().body(body).header(headers).send();
+}
+</code></pre>
+
+<p>After writing <code>knock</code>, I wanted to write a command line tool to send an HTTP request.
+Before that, I used POSTMAN, but I don&rsquo;t like electron because it&rsquo;s Chrome.
+I don&rsquo;t like chrome at all, but when it needs to be used to work with POSTMAN it&rsquo;s too much.
+So I started using my <code>knock</code> lib for writing command-line tool on Rust.</p>
+
+<p>I wrote it quickly, I had to add some code to <code>knock</code> lib.
+Now I have a command-line tool with name <code>getsb</code>. It&rsquo;s not over yet, and now version v0.1.0. I want to add more features. So I will very glad for any help.</p>
+
+<h5 id="how-to-install">How to Install</h5>
+
+<pre><code class="language-shell">$ git clone https://github.com/nsheremet/getsb-cli.git
+$ cd getsb-cli
+$ cargo build --release
+</code></pre>
+
+<p>And then move binary file in bin dir:</p>
+
+<h6 id="linux">Linux</h6>
+
+<pre><code class="language-shell">$ sudo mv target/release/getsb /usr/local/bin
+</code></pre>
+
+<h6 id="osx">OSX</h6>
+
+<pre><code class="language-shell">$ sudo mv target/release/getsb /usr/local/bin/getsb
+</code></pre>
+
+<h6 id="windows">Windows</h6>
+
+<ul>
+<li>Create a folder for getsb</li>
+<li>search for <code>env</code></li>
+<li>open &ldquo;edit your enviroment variables&rdquo;</li>
+<li>edit <code>PATH</code></li>
+<li>append folder path to the end of the string ie: <code>&lt;path_stuff_here&gt;;C:/getsb/;</code></li>
+</ul>
+
+<h5 id="how-to-use">How to use</h5>
+
+<pre><code class="language-shell">$ getsb POST https://example.com/api/data -b &quot;key=value&quot; -h &quot;Content-Type: application/x-www-form-urlencoded&quot;
+</code></pre>
+
+<p>For more info check <a href="https://github.com/nsheremet/getsb-cli/blob/master/README.md">README.md</a> file.</p>
+
+<p>After all this, I really liked Rust. This is an awesome language with safe working with memory and other awesome things.</p>
+
+<p>If you want to start to learn here is few links:</p>
+
+<ul>
+<li><a href="https://www.rust-lang.org/en-US/index.html">Rust-Lang</a></li>
+<li><a href="https://doc.rust-lang.org/book/">The Rust Programming Language Book</a></li>
+<li><a href="https://github.com/kud1ing/awesome-rust">Awesome Rust</a></li>
+</ul>
+
+<p>And also link on my projects:</p>
+
+<ul>
+<li><a href="https://github.com/nsheremet/knock">knock</a></li>
+<li><a href="https://github.com/nsheremet/getsb-cli">getsb-cli</a></li>
+</ul>
+
+<p>So, if you want to learn Rust, here is a very nice <a href="https://doc.rust-lang.org/book/">book</a>.</p>
+
+<h4 id="thanks">Thanks.</h4>
+
+              <hr>
+              <div class="related-posts">
+                <h5>Related Posts</h5>
+                
+                  <div class="row">
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                      <h6 style="text-align: right">
+                        April 10, 2017
+                      </h6>
+                    </div>
+                    <div class="col-sm-8 col-md-8 col-lg-8">
+                      <h6 style="text-align: left">
+                        <strong><a href="/blog/ruby-weekly/">How my post got into Ruby Weekly 343</a></strong>
+                      </h6>
+                    </div>
+                  </div>
+                
+                  <div class="row">
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                      <h6 style="text-align: right">
+                        April 4, 2017
+                      </h6>
+                    </div>
+                    <div class="col-sm-8 col-md-8 col-lg-8">
+                      <h6 style="text-align: left">
+                        <strong><a href="/blog/mruby-smallhttp/">How I wrote the http-client for MRuby</a></strong>
+                      </h6>
+                    </div>
+                  </div>
+                
+                  <div class="row">
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                      <h6 style="text-align: right">
+                        February 18, 2016
+                      </h6>
+                    </div>
+                    <div class="col-sm-8 col-md-8 col-lg-8">
+                      <h6 style="text-align: left">
+                        <strong><a href="/blog/removed-resource/">New update in Faat!</a></strong>
+                      </h6>
+                    </div>
+                  </div>
+                
+              </div>
+            </div>
+          </div>
+          <hr>
+        <div class="disqus">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+
+    (function() {
+      
+      
+      if (window.location.hostname == "localhost")
+        return;
+
+      var disqus_shortname = 'nsheremet';
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+        </div>
+      </div>
+      
+    </div>
+
+    
+    <footer>
+  <div id="footer">
+    <div class="container">
+      <p class="text-muted">&copy; 2017 Nazarii Sheremet. All rights reserved. Powered by <a href="https://gohugo.io/">Hugo</a> and
+      <a href="http://www.github.com/nurlansu/hugo-sustain/">sustain</a> with ♥</p>
+    </div>
+  </div>
+</footer>
+<div class="footer"></div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://nsheremet.pw/js/docs.min.js"></script>
+<script src="https://nsheremet.pw/js/main.js"></script>
+
+<script src="https://nsheremet.pw/js/ie10-viewport-bug-workaround.js"></script>
+
+
+    
+  </body>
+</html>
