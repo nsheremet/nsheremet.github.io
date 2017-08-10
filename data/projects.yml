@@ -1,0 +1,46 @@
+name: Projects
+source:
+  - icon: fa fa-github
+    name: had-gem
+    description: Had is Hanami Api Documentation gem. This gem generates API documentation for integration tests written with RSpec for Hanami
+    url: https://github.com/nsheremet/had
+
+  - icon: fa fa-github
+    name: 'getsb-cli'
+    description: Getsb is a command-line tool for sending HTTP request.
+    url: https://github.com/nsheremet/getsb-cli
+
+  - icon: fa fa-github
+    name: knock
+    description: knock is a simple HTTP Client library for Rust
+    url: https://github.com/nsheremet/knock
+
+  - icon: fa fa-github
+    name: mruby-smallhttp
+    description: Small http-client gem for mruby
+    url: https://github.com/nsheremet/mruby-smallhttp
+
+  - icon: fa fa-github
+    name: mruby-tbot
+    description: MRuby library for working with Telegram Bot API.
+    url: https://github.com/nsheremet/mruby-tbot
+
+  - icon: fa fa-telegram
+    name: deadlytweetbot
+    description: This is Telegram Bot, which can help you to post your tweets in Twitter with auto destroying timer. So when times over, your tweet is gone.
+    url: https://telegram.me/deadlytweetbot
+
+  - icon: fa fa-github
+    name: faat
+    description: It's Faat! Gem that will kill your fat model. Generally it is a library that allows you to conveniently operate service objects in Ruby on Rails.
+    url: https://github.com/nsheremet/faat
+
+  - icon: fa fa-link
+    name: Karatel App
+    description: API for mobile application & Web Admin Panel
+    url: https://karatel.foundation101.org
+
+  - icon: fa fa-link
+    name: DarcMatter.com
+    description: DarcMatter- an online investment platform that provides transparent and seamless access into alternative investments.
+    url: https://darcmatter.com
