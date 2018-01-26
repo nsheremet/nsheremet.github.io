@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mruby on Nazarii Sheremet</title>
-    <link>https://nsheremet.pw/tags/mruby/</link>
+    <link>https://sheremet.pw/tags/mruby/</link>
     <description>Recent content in Mruby on Nazarii Sheremet</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Mon, 10 Apr 2017 14:25:24 +0300</lastBuildDate>
     
-	<atom:link href="https://nsheremet.pw/tags/mruby/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://sheremet.pw/tags/mruby/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>How my post got into Ruby Weekly 343</title>
-      <link>https://nsheremet.pw/blog/ruby-weekly/</link>
+      <link>https://sheremet.pw/blog/ruby-weekly/</link>
       <pubDate>Mon, 10 Apr 2017 14:25:24 +0300</pubDate>
       
-      <guid>https://nsheremet.pw/blog/ruby-weekly/</guid>
+      <guid>https://sheremet.pw/blog/ruby-weekly/</guid>
       <description>Hi guys. A few days ago I wrote post about my problem with http-client mgems in mruby. There I described the work with my library mruby-smallhttp. And this post got into Ruby Weekly 343, here is the link. I dont know how they found my post, but I need to say thanks to Ruby Weekly team.
 The Ruby Weekly is &amp;ldquo;A free, once–weekly e-mail round-up of Ruby news and articles.</description>
     </item>
     
     <item>
       <title>How I wrote the http-client for MRuby</title>
-      <link>https://nsheremet.pw/blog/mruby-smallhttp/</link>
+      <link>https://sheremet.pw/blog/mruby-smallhttp/</link>
       <pubDate>Tue, 04 Apr 2017 14:25:24 +0300</pubDate>
       
-      <guid>https://nsheremet.pw/blog/mruby-smallhttp/</guid>
+      <guid>https://sheremet.pw/blog/mruby-smallhttp/</guid>
       <description>Hi guys. While I was working on the library for Telegram API. I ran into the problem of finding a good http-client library. Some libraries did not allow multipart/form-data requests. And in others it was necessary to form the body itself. I thought that this is a problem that I can solve. I wrote a library, which is a small http-client (less than 200 lines of code). There are still small problems in it.</description>
     </item>
     

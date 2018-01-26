@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rust Lang on Nazarii Sheremet</title>
-    <link>https://nsheremet.pw/tags/rust-lang/</link>
+    <link>https://sheremet.pw/tags/rust-lang/</link>
     <description>Recent content in Rust Lang on Nazarii Sheremet</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Tue, 18 Apr 2017 13:11:29 +0300</lastBuildDate>
     
-	<atom:link href="https://nsheremet.pw/tags/rust-lang/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://sheremet.pw/tags/rust-lang/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>My first Rust Experience</title>
-      <link>https://nsheremet.pw/blog/getsb-cli/</link>
+      <link>https://sheremet.pw/blog/getsb-cli/</link>
       <pubDate>Tue, 18 Apr 2017 13:11:29 +0300</pubDate>
       
-      <guid>https://nsheremet.pw/blog/getsb-cli/</guid>
+      <guid>https://sheremet.pw/blog/getsb-cli/</guid>
       <description>Hi guys. Two weeks ago I started to learn Rust, for better learning, I decided to rewrite my library mruby-smallhttp on Rust. Let&amp;rsquo;s get to know Cargo. It&amp;rsquo;s something like bundler in Ruby world.
 $ cargo new library # =&amp;gt; generate a template for project $ tree # =&amp;gt; library ├── Cargo.toml └── src └── lib.rs  Cargo.toml it&amp;rsquo;s a manifest file. If you want to know more about how to get started in Rust, here is the link.</description>
     </item>

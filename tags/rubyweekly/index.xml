@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rubyweekly on Nazarii Sheremet</title>
-    <link>https://nsheremet.pw/tags/rubyweekly/</link>
+    <link>https://sheremet.pw/tags/rubyweekly/</link>
     <description>Recent content in Rubyweekly on Nazarii Sheremet</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Mon, 10 Apr 2017 14:25:24 +0300</lastBuildDate>
     
-	<atom:link href="https://nsheremet.pw/tags/rubyweekly/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://sheremet.pw/tags/rubyweekly/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>How my post got into Ruby Weekly 343</title>
-      <link>https://nsheremet.pw/blog/ruby-weekly/</link>
+      <link>https://sheremet.pw/blog/ruby-weekly/</link>
       <pubDate>Mon, 10 Apr 2017 14:25:24 +0300</pubDate>
       
-      <guid>https://nsheremet.pw/blog/ruby-weekly/</guid>
+      <guid>https://sheremet.pw/blog/ruby-weekly/</guid>
       <description>Hi guys. A few days ago I wrote post about my problem with http-client mgems in mruby. There I described the work with my library mruby-smallhttp. And this post got into Ruby Weekly 343, here is the link. I dont know how they found my post, but I need to say thanks to Ruby Weekly team.
 The Ruby Weekly is &amp;ldquo;A free, once–weekly e-mail round-up of Ruby news and articles.</description>
     </item>

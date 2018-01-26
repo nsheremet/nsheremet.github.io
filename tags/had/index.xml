@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Had on Nazarii Sheremet</title>
-    <link>https://nsheremet.pw/tags/had/</link>
+    <link>https://sheremet.pw/tags/had/</link>
     <description>Recent content in Had on Nazarii Sheremet</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Tue, 18 Jul 2017 13:11:29 +0300</lastBuildDate>
     
-	<atom:link href="https://nsheremet.pw/tags/had/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://sheremet.pw/tags/had/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Hanami Api Documentation [had]</title>
-      <link>https://nsheremet.pw/blog/had-gem/</link>
+      <link>https://sheremet.pw/blog/had-gem/</link>
       <pubDate>Tue, 18 Jul 2017 13:11:29 +0300</pubDate>
       
-      <guid>https://nsheremet.pw/blog/had-gem/</guid>
+      <guid>https://sheremet.pw/blog/had-gem/</guid>
       <description>Hi guys. A couple of days ago, I was searching a library, that will generate API documentation from RSpec specs. But I had one big problem, it&amp;rsquo;s Hanami Framework. We use Hanami for a couple of projects. Because they have good structure, they haven&amp;rsquo;t ActionSupport and many other pros. The result is I couldn&amp;rsquo;t find any library for Hanami, only for Rails/Sinatra.
 So. My first step was to find a good and simple library, that already has basic modules for creating HTML pages with documentations or create docs in JSON/pdf files.</description>
     </item>

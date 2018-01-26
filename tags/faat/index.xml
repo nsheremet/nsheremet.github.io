@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Faat on Nazarii Sheremet</title>
-    <link>https://nsheremet.pw/tags/faat/</link>
+    <link>https://sheremet.pw/tags/faat/</link>
     <description>Recent content in Faat on Nazarii Sheremet</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Thu, 18 Feb 2016 14:33:44 +0300</lastBuildDate>
     
-	<atom:link href="https://nsheremet.pw/tags/faat/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://sheremet.pw/tags/faat/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>New update in Faat!</title>
-      <link>https://nsheremet.pw/blog/removed-resource/</link>
+      <link>https://sheremet.pw/blog/removed-resource/</link>
       <pubDate>Thu, 18 Feb 2016 14:33:44 +0300</pubDate>
       
-      <guid>https://nsheremet.pw/blog/removed-resource/</guid>
+      <guid>https://sheremet.pw/blog/removed-resource/</guid>
       <description>Hi, guys! I decided to remove the ability to create resources. Because for ethical reasons it is better to use the concept of services. Since it is more suitable for the removal of business logic in services. Also the concept of services for wider use. And also since the implementation of resources and services was the same, it would be correct to leave only services.
 Link on Faat!-v0.1.6
 Updated usage Run rails generate faat:services {service_name}, generator will create folder services in app directory, and file {service_name}_service.</description>
@@ -24,10 +24,10 @@ Updated usage Run rails generate faat:services {service_name}, generator will cr
     
     <item>
       <title>How to use services in Rails with Faat!</title>
-      <link>https://nsheremet.pw/blog/faat-update/</link>
+      <link>https://sheremet.pw/blog/faat-update/</link>
       <pubDate>Tue, 26 Jan 2016 14:36:32 +0300</pubDate>
       
-      <guid>https://nsheremet.pw/blog/faat-update/</guid>
+      <guid>https://sheremet.pw/blog/faat-update/</guid>
       <description>Faat! v0.1.5 As I wrote earlier, I am developing a gem-generator for the separation of the base rails logic to resources, services and forms. Today I released a new version of my gem Faat!-v0.1.5. And added the module services to separate the logic of your rails projects.
 Now, you will see examples of working with service.
 Example: Ok, we just generated new payment_service.rb:
@@ -36,10 +36,10 @@ class PaymentService &amp;lt; Faat::Services::Base def year_payment # .</descrip
     
     <item>
       <title>This is my FAAT!</title>
-      <link>https://nsheremet.pw/blog/faat-gem/</link>
+      <link>https://sheremet.pw/blog/faat-gem/</link>
       <pubDate>Wed, 18 Nov 2015 14:42:26 +0300</pubDate>
       
-      <guid>https://nsheremet.pw/blog/faat-gem/</guid>
+      <guid>https://sheremet.pw/blog/faat-gem/</guid>
       <description>I want to introduce you with my first open-source project. It&amp;rsquo;s Faat! Gem that will kill your fat model.
 Link at my gem on RubyGems and GitHub
 Installation Add this line to your application&amp;rsquo;s Gemfile:
